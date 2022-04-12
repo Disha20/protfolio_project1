@@ -210,4 +210,15 @@ daily_activity_filtered = dailyActivity_df %>%
          SedentaryMinutes) %>% summary()
 View(daily_activity_filtered)
 
+install.packages("rio")
+library(rio)
 
+# export cleaned csv for analysis purpose
+
+export(dailyActivity_df, "dailyActivity_df.csv")
+export(dailyCalories_merged_df, "dailyCalories_merged_df.csv")
+export(daily_sleep, "daily_sleep.csv")
+export(heartrate_seconds_merged_df, "heartrate_seconds_merged_df.csv")
+export(dailyIntensities_merged_df, "dailyIntensities_merged_df.csv")
+export(weightLogInfo_merged_df, "weightLogInfo_merged_df.csv")
+export(hourlyCalories_df, "hourlyCalories_df.csv")
